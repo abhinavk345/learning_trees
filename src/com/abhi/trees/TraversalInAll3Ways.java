@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class TraversalInAll3Ways {
     public static void main(String[] args) {
+
        Node root= Node.createTree();
         Node.inOrder(root);
         System.out.println();
