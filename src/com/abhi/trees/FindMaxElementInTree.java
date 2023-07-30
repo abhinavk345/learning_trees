@@ -2,16 +2,23 @@ package com.abhi.trees;
 
 public class FindMaxElementInTree {
 
-   public static int findMaxElement( Node root){
-      if(root==null){
-          return 0;
-      }
-      int left=findMaxElement(root.left);
-       int right = findMaxElement(root.right);
+    public static int findMaxElement(Node root) {
+        if (root == null) {
+            return 0;
+        }
+        int left = findMaxElement(root.left);
+        int right = findMaxElement(root.right);
 
-       return Math.max(root.data,Math.max(left,right));
-   }
+        return Math.max(root.data, Math.max(left, right));
+    }
+
     public static void main(String[] args) {
+
+        Node root = Node.createTree();
+
+        int result = findMaxElement(root);
+
+        System.out.println("maximum value in tree is : " + result);
 
     }
 }
